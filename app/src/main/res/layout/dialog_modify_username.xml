@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/dp_10">
+    <EditText
+        android:id="@+id/user_name_edit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:maxLines="1"
+        android:hint="输入用户名"
+        android:paddingLeft="@dimen/dp_10"
+        android:background="@color/colorBG"/>
+    <EditText
+        android:id="@+id/user_signature_edit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_100"
+        android:maxLines="1"
+        android:background="@color/colorBG"
+        android:paddingLeft="@dimen/dp_10"
+        android:hint="输入个性签名"
+        android:layout_marginTop="@dimen/dp_5"
+        android:gravity="top"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/dp_5"
+        >
+        <Button
+            android:id="@+id/cancle_bt"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btn_send_normal"
+            android:text="取消"
+            android:layout_marginRight="@dimen/dp_10"/>
+        <Button
+            android:id="@+id/ok_bt"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btn_send_pressed"
+            android:text="保存"
+            android:textColor="@color/colorWhite"/>
+
+    </LinearLayout>
+
+</LinearLayout>

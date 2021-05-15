@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:paddingTop="@dimen/dp_50"
+    android:paddingBottom="@dimen/dp_50"
+    android:background="@drawable/toolbar_bg">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        >
+
+        <com.Blinger.base.utils.CircleImageView
+            android:id="@+id/avater_iv"
+            android:layout_width="@dimen/dp_80"
+            android:layout_height="@dimen/dp_80"
+            android:src="@drawable/default_avater">
+        </com.Blinger.base.utils.CircleImageView>
+
+        <TextView
+            android:id="@+id/user_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="起一个好听的名字？"
+            android:textColor="@color/colorWhite"
+            android:layout_marginTop="@dimen/dp_10"/>
+        <TextView
+            android:id="@+id/user_desc_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="用一句话介绍你自己"
+            android:textColor="@color/colorWhite"
+            android:layout_marginTop="@dimen/dp_10"/>
+        <Button
+            android:id="@+id/modify_info_bt"
+            android:layout_width="@dimen/dp_100"
+            android:layout_height="@dimen/dp_30"
+            android:text="编辑资料"
+            android:textColor="@color/colorDeepGreen"
+            android:background="@drawable/btn_send_normal"
+            android:layout_marginTop="@dimen/dp_10"/>
+    </LinearLayout>
+
+
+</FrameLayout>

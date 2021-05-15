@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--modified by 逃课 2020/11/17
+    新增floatactionbar随recycleview滑动逐渐消失
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srlHeaderMaxDragRate="5"
+        >
+        <com.scwang.smartrefresh.layout.header.ClassicsHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srlDrawableArrow="@drawable/refresh"
+            />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layoutAnimation="@anim/anim_recycle" />
+
+            <RelativeLayout
+                android:id="@+id/rl_top_toast"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="#D6E9F6"
+                android:visibility="gone">
+                <TextView
+                    android:id="@+id/tv_toast"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="为你成功推荐30条"
+                    android:textColor="#3393D5"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/up_float_bt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_up"
+            android:layout_gravity="bottom|right"
+            android:layout_marginRight="@dimen/dp_20"
+            android:layout_marginBottom="@dimen/dp_88"
+            android:backgroundTint="@color/colorGreen"
+            app:elevation="@dimen/dp_8"
+            app:layout_behavior="com.Blinger.YiDeNews.utils.ScrollAwareBehavior"
+            />
+
+
+    </android.support.design.widget.CoordinatorLayout>
+
+
+
+
+</RelativeLayout>
+
