@@ -1,5 +1,7 @@
 package com.Blinger.YiDeNews.presenter;
 
+import android.util.Log;
+
 import com.Blinger.base.base.BasePresenter;
 import com.Blinger.base.base.BaseView;
 import com.Blinger.YiDeNews.model.UserInfoBean;
@@ -33,6 +35,7 @@ public class SplashPresenter extends BasePresenter<BaseView>{
                     @Override
                     public void onFailed(String msg) {
                         mView.showError(msg);
+                        Log.d("sakura","注册失败" + msg);
                     }
 
                     @Override

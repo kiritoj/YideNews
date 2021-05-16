@@ -81,7 +81,7 @@ public class RetrofitManager
                     mRetrofit = new Retrofit.Builder()
                             .client(builder.build())
                             //基础URL 建议以 / 结尾
-                            .baseUrl(Config.BASE_URL)
+                            .baseUrl(Config.BASE_URL_OTHER)
                             //设置 Json 转换器
                             .addConverterFactory(GsonConverterFactory.create())
                             //RxJava 适配器

@@ -27,19 +27,22 @@ import retrofit2.http.Query;
 
 public interface ApiService
 {
+    //获取分类的新闻
     @Headers({"url_name:other"})
     @GET("/ydkb/news/content/other")
     Observable<BaseBean<DataBean<List<NewBean>>>> getNewsList(@Query("type") String type
             , @Query("userUniqueKey") String userId
             ,@Query("recommendType") int index);
 
+    //获取头条新闻
     @Headers({"url_name:other"})
-    @GET("/news/news/content/top")
+    @GET("/ydkb/news/content/top")
     Observable<BaseBean<DataBean<List<NewBean>>>> getMyNewsList(@Query("userUniqueKey") String userId
             ,@Query("recommendType") int index);
 
+    //反馈不喜欢原因
     @Headers({"url_name:other"})
-    @GET("/news/news/distaste")
+    @GET("/ydkb/news/distaste")
     Observable<BaseBean<DataBean<List<UserInfoBean>>>> postEnjoy(@Query("newsUniqueKey") String newUid,@Query("userUniqueKey") String userId,@Query("feedbackContent") String feedbackContent);
 
     //上传用户历史浏览记录
@@ -52,12 +55,14 @@ public interface ApiService
             ,@Query("newsType") String type
             ,@Query("newsUrl") String url);
 
+    //用户注册
     @Headers({"url_name:other"})
-    @GET("/news/news/register")
+    @GET("/ydkb/news/register")
     Observable<BaseBean<DataBean<List <UserInfoBean>>>> postNewUser(@Query("uniqueKey") String UID,@Query("userName") String name,@Query("imageType") int imageType,@Query("latitude") double latitude,@Query("longitude") double longitude);//
 
+    //添加评论
     @Headers({"url_name:other"})
-    @POST("/ydkb/news/comment/update")
+    @POST("/ydkb/news/comment/update               ")
     @FormUrlEncoded
     Observable<BaseBean<DataBean<List<UserTailBean>>>> postReview(
             @Field("newsUniqueKey") String newsId
@@ -70,7 +75,7 @@ public interface ApiService
 
     //获取新闻评论列表
     @Headers({"url_name:other"})
-    @GET("/news/news/comment/get")
+    @GET("/ydkb/news/comment/get")
     Observable<BaseBean<DataBean<List<CommentBean>>>> getReviewList(@Query("newsUniqueKey") String newsUid,@Query("userUniqueKey") String userId);
 
     //更新文章点赞数
@@ -84,7 +89,7 @@ public interface ApiService
 
     //上传用户收藏新闻
     @Headers({"url_name:other"})
-    @GET("/news/news/collect")
+    @GET("/ydkb/news/collect")
     Observable<BaseBean<DataBean<List<UserTailBean>>>> postCollect(
             @Query("newsUniqueKey") String newsId
             ,@Query("userUniqueKey")String userId
